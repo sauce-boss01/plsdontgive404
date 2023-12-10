@@ -1,4 +1,7 @@
 --free robux real!11!1
+if not _G.Executed then do
+wait(0.1)
+_G.Executed = true
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
 local dailyR = playerGui.DailyRewardGui.DailyReward_Frame
@@ -40,4 +43,8 @@ game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disable
 
 workspace.Enemies.NPC.Humanoid.WalkToPart = workspace.RobuxMap.Billboards:GetChildren()[4]["Meshes/Billboard_Cube.004"]
 workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.WalkToPart = workspace.ExternalMap.Island_Map.Island_Terrain_Parts.IslandParts:GetChildren()[134]
+end
+	end
+else
+game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Script already executed", Icon = "rbxassetid://2541869220", Duration = 5, Button1 = "Okay"})
 end
