@@ -43,8 +43,6 @@ game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disable
 
 workspace.Enemies.NPC.Humanoid.WalkToPart = workspace.RobuxMap.Billboards:GetChildren()[4]["Meshes/Billboard_Cube.004"]
 workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.WalkToPart = workspace.ExternalMap.Island_Map.Island_Terrain_Parts.IslandParts:GetChildren()[134]
-end
-
 local LocalPlayer = Players.LocalPlayer
 	local oldhmmi
 	local oldhmmnc
@@ -61,6 +59,8 @@ local LocalPlayer = Players.LocalPlayer
 		return oldhmmnc(self, ...)
 	end)
 end
+end
+
 else
 game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Script already executed", Icon = "rbxassetid://2541869220", Duration = 5, Button1 = "Okay"})
 end
