@@ -41,23 +41,28 @@ game:GetService("StarterPlayer").StarterCharacterScripts.Anti.Disabled = true
 game:GetService("StarterPlayer").StarterCharacterScripts["JyAntiCheat.lua"].Disabled = true
 game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disabled = true
 
-workspace.Enemies.NPC.Humanoid.WalkToPart = workspace.RobuxMap.Billboards:GetChildren()[4]["Meshes/Billboard_Cube.004"]
-workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.WalkToPart = workspace.ExternalMap.Island_Map.Island_Terrain_Parts.IslandParts:GetChildren()[134]
+workspace.Enemies.NPC.Humanoid.JumpPower = (2^64)
+workspace.Enemies.NPC.Humanoid.Jump = true
+
+workspace.ExternalMap.Island_Map.Enemies.NPC.JumpPower = (2^64)
+workspace.ExternalMap.Island_Map.Enemies.NPC.Jump = true
+
+local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-	local oldhmmi
-	local oldhmmnc
-	oldhmmi = hookmetamethod(game, "__index", function(self, method)
-		if self == LocalPlayer and method:lower() == "kick" then
-			return error("Expected ':' not '.' calling member function Kick", 2)
-		end
-		return oldhmmi(self, method)
-	end)
-	oldhmmnc = hookmetamethod(game, "__namecall", function(self, ...)
-		if self == LocalPlayer and getnamecallmethod():lower() == "kick" then
-			return
-		end
-		return oldhmmnc(self, ...)
-	end)
+    local oldhmmi
+    local oldhmmnc
+    oldhmmi = hookmetamethod(game, "__index", function(self, method)
+        if self == LocalPlayer and method:lower() == "kick" then
+            return error("Expected ':' not '.' calling member function Kick", 2)
+        end
+        return oldhmmi(self, method)
+    end)
+    oldhmmnc = hookmetamethod(game, "__namecall", function(self, ...)
+        if self == LocalPlayer and getnamecallmethod():lower() == "kick" then
+            return
+        end
+        return oldhmmnc(self, ...)
+    end)
 end
 end
 
