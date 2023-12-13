@@ -30,7 +30,7 @@ notifSound.Volume = 0.3
 notifSound.SoundId = "rbxassetid://170765130"
 notifSound.PlayOnRemove = true
 notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "fucked up the killer bot", Text = "broke the killer bot AI ", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+game.StarterGui:SetCore("SendNotification", {Title = "fucked up the killer bot", Text = "broke the killer bot ", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
 
 
 while wait(0.15) do
@@ -41,8 +41,7 @@ game:GetService("StarterPlayer").StarterCharacterScripts.Anti.Disabled = true
 game:GetService("StarterPlayer").StarterCharacterScripts["JyAntiCheat.lua"].Disabled = true
 game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disabled = true
 
-workspace.Enemies.NPC.Humanoid.JumpPower = (2^64)
-workspace.Enemies.NPC.Humanoid.Jump = true
+workspace.Enemies.NPC.Humanoid.Health = 0
 
 workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.Health = 0
 
