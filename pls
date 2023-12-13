@@ -44,8 +44,8 @@ game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disable
 workspace.Enemies.NPC.Humanoid.JumpPower = (2^64)
 workspace.Enemies.NPC.Humanoid.Jump = true
 
-workspace.ExternalMap.Island_Map.Enemies.NPC.JumpPower = (2^64)
-workspace.ExternalMap.Island_Map.Enemies.NPC.Jump = true
+workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.JumpPower = (2^64)
+workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.Jump = true
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
