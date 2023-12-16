@@ -2,6 +2,12 @@ if not _G.ExecutedBall then
 	wait(0.1)
 	_G.ExecutedBall = true
 
+
+
+
+
+
+
 	-- Instances: 12 | Scripts: 1 | Modules: 0
 	local G2L = {};
 
@@ -58,8 +64,47 @@ if not _G.ExecutedBall then
 	G2L["7"]["BackgroundTransparency"] = 1;
 
 	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
+	G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.Enabled
+	G2L["9"] = Instance.new("BoolValue", G2L["7"]);
+	G2L["9"]["Name"] = [[Enabled]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.Val
+	G2L["a"] = Instance.new("Frame", G2L["6"]);
+	G2L["a"]["BorderSizePixel"] = 0;
+	G2L["a"]["BackgroundColor3"] = Color3.fromRGB(40, 210, 255);
+	G2L["a"]["Position"] = UDim2.new(0.5086943507194519, 0, 0.5053769946098328, 0);
+	G2L["a"]["Name"] = [[Val]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.TextLabel
+	G2L["b"] = Instance.new("TextLabel", G2L["4"]);
+	G2L["b"]["TextWrapped"] = true;
+	G2L["b"]["TextScaled"] = true;
+	G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["b"]["TextSize"] = 14;
+	G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["b"]["Size"] = UDim2.new(0.7854087948799133, 0, 1, 0);
+	G2L["b"]["Text"] = [[Grabbing balls]];
+	G2L["b"]["BackgroundTransparency"] = 1;
+	G2L["b"]["Position"] = UDim2.new(0.011478028260171413, 0, -5.805463842989411e-07, 0);
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.UICorner
+	G2L["c"] = Instance.new("UICorner", G2L["4"]);
+
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
 	local function C_8()
 		local script = G2L["8"];
+
+
+
+
+
+
+
 
 		local player = game.Players.LocalPlayer
 		local workspace = game:GetService("Workspace")
@@ -85,8 +130,43 @@ if not _G.ExecutedBall then
 						wait(0.4)  -- Adjust the wait time between teleports
 					end
 				end
-         end
-    end
 			end
 		end
 
+		local function stopTeleporting()
+			isTeleporting = false
+		end
+
+		local function toggleTeleporting()
+			isTeleporting = not isTeleporting
+			if isTeleporting then
+				startTeleporting()
+			end
+		end
+
+		script.Parent.MouseButton1Click:Connect(function()
+			if script.Parent.Enabled.Value == false then
+				script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
+				script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
+				toggleTeleporting()
+				script.Parent.Enabled.Value = true
+			else
+				script.Parent.Parent.Val:TweenPosition(UDim2.new(0.5,0,0.5,0),'Out','Linear',0.1)
+				script.Parent.Parent.Val:TweenSize(UDim2.new(0,0,0,0),'Out','Linear',0.1)
+				stopTeleporting()
+				script.Parent.Enabled.Value = false
+			end
+		end)
+	end
+	task.spawn(C_8);
+
+	return G2L["1"]
+else
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Notification",
+		Text = "Script already executed",
+		Icon = "rbxassetid://2541869220",
+		Duration = 5,
+		Button1 = "Okay"
+	})
+end
