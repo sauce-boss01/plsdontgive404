@@ -120,8 +120,6 @@ local function createPlatform()
 	if not platform then
 		platform = Instance.new("Part")
 		platform.Size = Vector3.new(50, 5, 50)
-                platform.Texture = 13941233518
-                Instance.new("Decal").Parent = platform
 		platform.Position = Vector3.new(0, -500, 0)  -- Adjust the position as needed
 		platform.Anchored = true
 		platform.Parent = workspace
