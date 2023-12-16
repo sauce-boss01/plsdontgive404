@@ -106,9 +106,9 @@ local player = game.Players.LocalPlayer
 local workspace = game:GetService("Workspace")
 
 local function teleportToPart(part)
-    if part:IsA("BasePart") then
-        player.Character:SetPrimaryPartCFrame(part.CFrame)
-    end
+	if part:IsA("BasePart") then
+		player.Character:SetPrimaryPartCFrame(part.CFrame)
+	end
 end
 
 local platform = nil
@@ -117,66 +117,67 @@ local isTeleporting = false
 local startPosition = nil
 
 local function createPlatform()
-    if not platform then
-        platform = Instance.new("Part")
-        platform.Size = Vector3.new(100, 1, 100)
-        platform.Position = Vector3.new(0, -5, 0)  -- Adjust the position as needed
-        platform.Anchored = true
-        platform.BrickColor = BrickColor.new("Grey")
-        platform.Parent = workspace
-    end
+	if not platform then
+		platform = Instance.new("Part")
+		platform.Size = Vector3.new(50, 5, 50)
+		platform.Position = Vector3.new(0, -500, 0)  -- Adjust the position as needed
+		platform.Anchored = true
+		platform.Parent = workspace
+	end
+end
+
+local function teleportToPlatform()
+	if not platform then
+		createPlatform()
+	end
+	player.Character:SetPrimaryPartCFrame(CFrame.new(platform.Position + Vector3.new(0, 5, 0)))
 end
 
 local function startTeleporting()
-    startPosition = player.Character.HumanoidRootPart.Position
-    while isTeleporting do
-        wait(1)  -- Adjust the wait time as needed
+	startPosition = player.Character:FindFirstChild("HumanoidRootPart").Position
+	while isTeleporting do
+		wait(1)  -- Adjust the wait time as needed
 
-        local hasBalls = false
+		local hasBalls = false
 
-        for _, child in ipairs(workspace:GetChildren()) do
-            if child:IsA("BasePart") and string.find(child.Name:lower(), "ball") and not checkedParts[child] then
-                print("Teleporting to " .. child.Name)
-                teleportToPart(child)
-                checkedParts[child] = true
-                hasBalls = true
-                wait(0.4)  -- Adjust the wait time between teleports
-            end
-        }
+		for _, child in ipairs(workspace:GetChildren()) do
+			if child:IsA("BasePart") and string.find(child.Name:lower(), "ball") and not checkedParts[child] then
+				print("Teleporting to " .. child.Name)
+				teleportToPart(child)
+				checkedParts[child] = true
+				hasBalls = true
+				wait(0.4)  -- Adjust the wait time between teleports
+			end
+		end
 
-        if not hasBalls then
-            print("No balls found. Teleporting to platform.")
-            createPlatform()
-            player.Character:SetPrimaryPartCFrame(CFrame.new(platform.Position + Vector3.new(0, 5, 0)))
-        end
-    end
+		if not hasBalls then
+			print("no balls found, teleporting to platform.")
+			teleportToPlatform()
+		end
+	end
 end
 
 local function stopTeleporting()
-    isTeleporting = false
-    if startPosition then
-        player.Character:SetPrimaryPartCFrame(CFrame.new(startPosition))
-    end
+	isTeleporting = false
+	if startPosition then
+		player.Character:SetPrimaryPartCFrame(CFrame.new(startPosition))
+	end
 end
 
 local function toggleTeleporting()
-    isTeleporting = not isTeleporting
-    if isTeleporting then
-        startTeleporting()
-    else
-        stopTeleporting()
-    end
+	isTeleporting = not isTeleporting
+	if isTeleporting then
+		startTeleporting()
+	else
+		stopTeleporting()
+	end
 end
-
--- Connect the toggle function to a user input (e.g., a button click)
--- Example: script.Parent.MouseButton1Click:Connect(toggleTeleporting)
-
 
 script.Parent.MouseButton1Click:Connect(function()
 	if script.Parent.Enabled.Value == false then
 		script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
 		script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
-		toggleTeleporting()  -- Use toggleTeleporting instead of startTeleporting
+		toggleTeleporting() 
 		script.Parent.Enabled.Value = true
 	else
 		script.Parent.Parent.Val:TweenPosition(UDim2.new(0.5,0,0.5,0),'Out','Linear',0.1)
@@ -185,6 +186,7 @@ script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Enabled.Value = false
 	end
 end)
+
 	
 	
 	
