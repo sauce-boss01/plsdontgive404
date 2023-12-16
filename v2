@@ -15,7 +15,8 @@ if not _G.ExecutedBall then
 	G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 	G2L["1"]["Name"] = [[grab ball]];
 	G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-	G2L["1"]["ResetOnRespawn"] = false
+	G2L["1"]["ResetOnSpawn"] = false;
+
 
 	-- StarterGui.grab ball.Frame
 	G2L["2"] = Instance.new("Frame", G2L["1"]);
