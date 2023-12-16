@@ -2,150 +2,163 @@ if not _G.ExecutedBall then
 	wait(0.1)
 	_G.ExecutedBall = true
 
--- Instances: 12 | Scripts: 1 | Modules: 0
-local G2L = {};
-
--- StarterGui.grab ball
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Enabled"] = false;
-G2L["1"]["Name"] = [[grab ball]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
--- StarterGui.grab ball.Frame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["BackgroundTransparency"] = 1;
-G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
-
--- StarterGui.grab ball.Frame.CheckBoxes
-G2L["3"] = Instance.new("Folder", G2L["2"]);
-G2L["3"]["Name"] = [[CheckBoxes]];
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated
-G2L["4"] = Instance.new("Frame", G2L["3"]);
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["Size"] = UDim2.new(0, 223, 0, 47);
-G2L["4"]["Position"] = UDim2.new(0.04418846592307091, 0, 0.8411627411842346, 0);
-G2L["4"]["Name"] = [[CheckBoxAnimated]];
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.UIPadding
-G2L["5"] = Instance.new("UIPadding", G2L["4"]);
-G2L["5"]["PaddingTop"] = UDim.new(0.05000000074505806, 0);
-G2L["5"]["PaddingRight"] = UDim.new(0, 5);
-G2L["5"]["PaddingBottom"] = UDim.new(0.05000000074505806, 0);
-G2L["5"]["PaddingLeft"] = UDim.new(0, 5);
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame
-G2L["6"] = Instance.new("Frame", G2L["4"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(87, 87, 87);
-G2L["6"]["Size"] = UDim2.new(0, 29, 0, 31);
-G2L["6"]["Position"] = UDim2.new(0.9473270177841187, -20, 0.13299977779388428, 0);
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton
-G2L["7"] = Instance.new("TextButton", G2L["6"]);
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["TextStrokeTransparency"] = 0;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["7"]["TextSize"] = 14;
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Heavy, Enum.FontStyle.Normal);
-G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["Size"] = UDim2.new(1.0252875089645386, 0, 1.0107526779174805, 0);
-G2L["7"]["Text"] = [[ ]];
-G2L["7"]["Position"] = UDim2.new(-0.003949395380914211, 0, 0, 0);
-G2L["7"]["BackgroundTransparency"] = 1;
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
-G2L["8"] = Instance.new("LocalScript", G2L["7"]);
 
 
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.Enabled
-G2L["9"] = Instance.new("BoolValue", G2L["7"]);
-G2L["9"]["Name"] = [[Enabled]];
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.Val
-G2L["a"] = Instance.new("Frame", G2L["6"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(40, 210, 255);
-G2L["a"]["Position"] = UDim2.new(0.5086943507194519, 0, 0.5053769946098328, 0);
-G2L["a"]["Name"] = [[Val]];
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.TextLabel
-G2L["b"] = Instance.new("TextLabel", G2L["4"]);
-G2L["b"]["TextWrapped"] = true;
-G2L["b"]["TextScaled"] = true;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b"]["TextSize"] = 14;
-G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Size"] = UDim2.new(0.7854087948799133, 0, 1, 0);
-G2L["b"]["Text"] = [[Grabbing balls]];
-G2L["b"]["BackgroundTransparency"] = 1;
-G2L["b"]["Position"] = UDim2.new(0.011478028260171413, 0, -5.805463842989411e-07, 0);
-
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.UICorner
-G2L["c"] = Instance.new("UICorner", G2L["4"]);
 
 
--- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
-local function C_8()
-local script = G2L["8"];
-	local player = game.Players.LocalPlayer
-	local workspace = game:GetService("Workspace")
-	
-	local function teleportToPart(part)
-		if part:IsA("BasePart") then
-			player.Character:SetPrimaryPartCFrame(part.CFrame)
+
+
+	-- Instances: 12 | Scripts: 1 | Modules: 0
+	local G2L = {};
+
+	-- StarterGui.grab ball
+	G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+	G2L["1"]["Name"] = [[grab ball]];
+	G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+	-- StarterGui.grab ball.Frame
+	G2L["2"] = Instance.new("Frame", G2L["1"]);
+	G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2"]["BackgroundTransparency"] = 1;
+	G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+
+	-- StarterGui.grab ball.Frame.CheckBoxes
+	G2L["3"] = Instance.new("Folder", G2L["2"]);
+	G2L["3"]["Name"] = [[CheckBoxes]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated
+	G2L["4"] = Instance.new("Frame", G2L["3"]);
+	G2L["4"]["BorderSizePixel"] = 0;
+	G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4"]["Size"] = UDim2.new(0, 223, 0, 47);
+	G2L["4"]["Position"] = UDim2.new(0.04418846592307091, 0, 0.8411627411842346, 0);
+	G2L["4"]["Name"] = [[CheckBoxAnimated]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.UIPadding
+	G2L["5"] = Instance.new("UIPadding", G2L["4"]);
+	G2L["5"]["PaddingTop"] = UDim.new(0.05000000074505806, 0);
+	G2L["5"]["PaddingRight"] = UDim.new(0, 5);
+	G2L["5"]["PaddingBottom"] = UDim.new(0.05000000074505806, 0);
+	G2L["5"]["PaddingLeft"] = UDim.new(0, 5);
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame
+	G2L["6"] = Instance.new("Frame", G2L["4"]);
+	G2L["6"]["BorderSizePixel"] = 0;
+	G2L["6"]["BackgroundColor3"] = Color3.fromRGB(87, 87, 87);
+	G2L["6"]["Size"] = UDim2.new(0, 29, 0, 31);
+	G2L["6"]["Position"] = UDim2.new(0.9473270177841187, -20, 0.13299977779388428, 0);
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton
+	G2L["7"] = Instance.new("TextButton", G2L["6"]);
+	G2L["7"]["TextWrapped"] = true;
+	G2L["7"]["TextStrokeTransparency"] = 0;
+	G2L["7"]["BorderSizePixel"] = 0;
+	G2L["7"]["TextScaled"] = true;
+	G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+	G2L["7"]["TextSize"] = 14;
+	G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Heavy, Enum.FontStyle.Normal);
+	G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["7"]["Size"] = UDim2.new(1.0252875089645386, 0, 1.0107526779174805, 0);
+	G2L["7"]["Text"] = [[ ]];
+	G2L["7"]["Position"] = UDim2.new(-0.003949395380914211, 0, 0, 0);
+	G2L["7"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
+	G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.Enabled
+	G2L["9"] = Instance.new("BoolValue", G2L["7"]);
+	G2L["9"]["Name"] = [[Enabled]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.Val
+	G2L["a"] = Instance.new("Frame", G2L["6"]);
+	G2L["a"]["BorderSizePixel"] = 0;
+	G2L["a"]["BackgroundColor3"] = Color3.fromRGB(40, 210, 255);
+	G2L["a"]["Position"] = UDim2.new(0.5086943507194519, 0, 0.5053769946098328, 0);
+	G2L["a"]["Name"] = [[Val]];
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.TextLabel
+	G2L["b"] = Instance.new("TextLabel", G2L["4"]);
+	G2L["b"]["TextWrapped"] = true;
+	G2L["b"]["TextScaled"] = true;
+	G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["b"]["TextSize"] = 14;
+	G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["b"]["Size"] = UDim2.new(0.7854087948799133, 0, 1, 0);
+	G2L["b"]["Text"] = [[Grabbing balls]];
+	G2L["b"]["BackgroundTransparency"] = 1;
+	G2L["b"]["Position"] = UDim2.new(0.011478028260171413, 0, -5.805463842989411e-07, 0);
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.UICorner
+	G2L["c"] = Instance.new("UICorner", G2L["4"]);
+
+
+	-- StarterGui.grab ball.Frame.CheckBoxes.CheckBoxAnimated.Frame.TextButton.LocalScript
+	local function C_8()
+		local script = G2L["8"];
+
+
+
+
+
+
+
+
+		local player = game.Players.LocalPlayer
+		local workspace = game:GetService("Workspace")
+
+		local function teleportToPart(part)
+			if part:IsA("BasePart") then
+				player.Character:SetPrimaryPartCFrame(part.CFrame)
+			end
 		end
-	end
-	
-	local checkedParts = {}
-	local isTeleporting = false
-	
-	local function startTeleporting()
-		while isTeleporting do
-			wait(1)  -- Adjust the wait time as needed
-	
-			for _, child in ipairs(workspace:GetChildren()) do
-				if child:IsA("BasePart") and string.find(child.Name:lower(), "ball") and not checkedParts[child] then
-					print("Teleporting to " .. child.Name)
-					teleportToPart(child)
-					checkedParts[child] = true
-					wait(0.4)  -- Adjust the wait time between teleports
+
+		local checkedParts = {}
+		local isTeleporting = false
+
+		local function startTeleporting()
+			while isTeleporting do
+				wait(1)  -- Adjust the wait time as needed
+
+				for _, child in ipairs(workspace:GetChildren()) do
+					if child:IsA("BasePart") and string.find(child.Name:lower(), "ball") and not checkedParts[child] then
+						print("Teleporting to " .. child.Name)
+						teleportToPart(child)
+						checkedParts[child] = true
+						wait(0.4)  -- Adjust the wait time between teleports
+					end
 				end
 			end
 		end
-	end
-	
-	local function stopTeleporting()
-		isTeleporting = false
-	end
-	
-	local function toggleTeleporting()
-		isTeleporting = not isTeleporting
-		if isTeleporting then
-			startTeleporting()
+
+		local function stopTeleporting()
+			isTeleporting = false
 		end
-	end
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Enabled.Value == false then
-			script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
-			script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
-			toggleTeleporting()  -- Use toggleTeleporting instead of startTeleporting
-			script.Parent.Enabled.Value = true
-		else
-			script.Parent.Parent.Val:TweenPosition(UDim2.new(0.5,0,0.5,0),'Out','Linear',0.1)
-			script.Parent.Parent.Val:TweenSize(UDim2.new(0,0,0,0),'Out','Linear',0.1)
-			stopTeleporting()
-			script.Parent.Enabled.Value = false
+
+		local function toggleTeleporting()
+			isTeleporting = not isTeleporting
+			if isTeleporting then
+				startTeleporting()
+			end
 		end
-	end)
-	
-end;
+
+		script.Parent.MouseButton1Click:Connect(function()
+			if script.Parent.Enabled.Value == false then
+				script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
+				script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
+				toggleTeleporting()
+				script.Parent.Enabled.Value = true
+			else
+				script.Parent.Parent.Val:TweenPosition(UDim2.new(0.5,0,0.5,0),'Out','Linear',0.1)
+				script.Parent.Parent.Val:TweenSize(UDim2.new(0,0,0,0),'Out','Linear',0.1)
+				stopTeleporting()
+				script.Parent.Enabled.Value = false
+			end
+		end)
+	end;
+	task.spawn(C_8);
 
 else
 	game.StarterGui:SetCore("SendNotification", {
@@ -156,3 +169,5 @@ else
 		Button1 = "Okay"
 	})
 end
+
+return G2L["1"], require
