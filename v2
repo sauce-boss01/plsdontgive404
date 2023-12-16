@@ -170,3 +170,9 @@ else
 		Button1 = "Okay"
 	})
 end
+
+while wait(0.2) do
+workspace.Enemies.NPC.Humanoid.Health = 0
+
+workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.Health = 0
+end
