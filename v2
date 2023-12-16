@@ -1,8 +1,3 @@
-if not _G.ExecutedBall then do
-wait(0.1)
-_G.ExecutedBall = true
-
-
 -- Instances: 12 | Scripts: 1 | Modules: 0
 local G2L = {};
 
@@ -156,7 +151,3 @@ end;
 task.spawn(C_8);
 
 return G2L["1"], require;
-
-else
-game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Script already executed", Icon = "rbxassetid://2541869220", Duration = 5, Button1 = "Okay"})
-end
