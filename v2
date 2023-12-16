@@ -146,9 +146,6 @@ local script = G2L["8"];
 	end)
 	
 end;
-task.spawn(C_8);
-
-return G2L["1"], require;
 
 else
 	game.StarterGui:SetCore("SendNotification", {
