@@ -3,11 +3,6 @@ if not _G.ExecutedBall then
     _G.ExecutedBall = true
 
 
-
-
-
-
-
 -- Instances: 12 | Scripts: 1 | Modules: 0
 local G2L = {};
 
@@ -186,11 +181,6 @@ script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Enabled.Value = false
 	end
 end)
-
-	
-	
-	
-	
 	
 end;
 task.spawn(C_8);
