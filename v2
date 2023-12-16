@@ -2,6 +2,7 @@ if not _G.ExecutedBall then
 	wait(0.1)
 	_G.ExecutedBall = true
 
+-- Instances: 12 | Scripts: 1 | Modules: 0
 local G2L = {};
 
 -- StarterGui.grab ball
@@ -132,10 +133,10 @@ local script = G2L["8"];
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if script.Parent.Enabled.Value == false then
-		script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
-		script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
-			startTeleporting()
-		script.Parent.Enabled.Value = true
+			script.Parent.Parent.Val:TweenPosition(UDim2.new(0.1,0,0.1,0),'Out','Linear',0.1)
+			script.Parent.Parent.Val:TweenSize(UDim2.new(0.8,0,0.8,0),'Out','Linear',0.1)
+			toggleTeleporting()  -- Use toggleTeleporting instead of startTeleporting
+			script.Parent.Enabled.Value = true
 		else
 			script.Parent.Parent.Val:TweenPosition(UDim2.new(0.5,0,0.5,0),'Out','Linear',0.1)
 			script.Parent.Parent.Val:TweenSize(UDim2.new(0,0,0,0),'Out','Linear',0.1)
@@ -143,8 +144,11 @@ local script = G2L["8"];
 			script.Parent.Enabled.Value = false
 		end
 	end)
+	
 end;
 task.spawn(C_8);
+
+return G2L["1"], require;
 
 else
 	game.StarterGui:SetCore("SendNotification", {
@@ -155,6 +159,3 @@ else
 		Button1 = "Okay"
 	})
 end
-
-
-return G2L["1"], require;
