@@ -23,27 +23,6 @@ end
 
 toggleButton.MouseButton1Click:Connect(toggleVisibility)
 
------AI DESTROYER
-local notifSound = Instance.new("Sound",workspace)
-notifSound.PlaybackSpeed = 1.5
-notifSound.Volume = 0.3
-notifSound.SoundId = "rbxassetid://170765130"
-notifSound.PlayOnRemove = true
-notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "fucked up the killer bot", Text = "broke the killer bot ", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
-
-
-while wait(0.15) do
-game:GetService("Players").LocalPlayer.PlayerScripts.AFK.Disabled = true
-game:GetService("Players").LocalPlayer.PlayerScripts.FriendRequest.Disabled = true
-
-workspace.Enemies.NPC.Humanoid.Health = 0
-
-workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.Health = 0
-
-end
-end
-
 else
 game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Script already executed", Icon = "rbxassetid://2541869220", Duration = 5, Button1 = "Okay"})
 end
