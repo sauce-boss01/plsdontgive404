@@ -1,6 +1,6 @@
-if not _G.ExecutedBall then
+if not _G.ExecutedBall1 then
     wait(0.1)
-    _G.ExecutedBall = true
+    _G.ExecutedBall1 = true
 
 
 -- Instances: 12 | Scripts: 1 | Modules: 0
@@ -10,7 +10,7 @@ local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[grab ball]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+G2L["1"]["ResetOnSpawn"] = false
 -- StarterGui.grab ball.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
