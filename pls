@@ -34,33 +34,13 @@ game.StarterGui:SetCore("SendNotification", {Title = "fucked up the killer bot",
 
 
 while wait(0.15) do
-game:GetService("StarterPlayer").StarterPlayerScripts.AFK.Disabled = true
 game:GetService("Players").LocalPlayer.PlayerScripts.AFK.Disabled = true
 game:GetService("Players").LocalPlayer.PlayerScripts.FriendRequest.Disabled = true
-game:GetService("StarterPlayer").StarterCharacterScripts.Anti.Disabled = true
-game:GetService("StarterPlayer").StarterCharacterScripts["JyAntiCheat.lua"].Disabled = true
-game:GetService("StarterPlayer").StarterPlayerScripts.AntiExploit_CLIENT.Disabled = true
 
 workspace.Enemies.NPC.Humanoid.Health = 0
 
 workspace.ExternalMap.Island_Map.Enemies.NPC.Humanoid.Health = 0
 
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-    local oldhmmi
-    local oldhmmnc
-    oldhmmi = hookmetamethod(game, "__index", function(self, method)
-        if self == LocalPlayer and method:lower() == "kick" then
-            return error("Expected ':' not '.' calling member function Kick", 2)
-        end
-        return oldhmmi(self, method)
-    end)
-    oldhmmnc = hookmetamethod(game, "__namecall", function(self, ...)
-        if self == LocalPlayer and getnamecallmethod():lower() == "kick" then
-            return
-        end
-        return oldhmmnc(self, ...)
-    end)
 end
 end
 
