@@ -1,0 +1,514 @@
+if not _G.hiroshima then
+_G.hiroshima = true
+local G2L = {};
+
+-- StarterGui.duper
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[duper]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.duper.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["2"]["Size"] = UDim2.new(0, 334, 0, 398);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0, 227, 0, 27);
+
+-- StarterGui.duper.Frame.Smooth GUI Dragging
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["3"]["Name"] = [[Smooth GUI Dragging]];
+
+-- StarterGui.duper.Frame.Titlee
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["TextStrokeTransparency"] = 0;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(53, 73, 205);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextStrokeColor3"] = Color3.fromRGB(254, 254, 254);
+G2L["4"]["TextSize"] = 44;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Size"] = UDim2.new(0, 334, 0, 50);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[bomb duper]];
+G2L["4"]["Name"] = [[Titlee]];
+
+-- StarterGui.duper.Frame.Titlee.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.duper.Frame.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["2"]);
+G2L["6"]["CornerRadius"] = UDim.new(0.02500000037252903, 0);
+
+-- StarterGui.duper.Frame.start
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["TextStrokeTransparency"] = 0;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(194, 255, 199);
+G2L["7"]["TextSize"] = 45;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Size"] = UDim2.new(0, 265, 0, 50);
+G2L["7"]["Name"] = [[start]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[start duping]];
+G2L["7"]["Position"] = UDim2.new(0, 34, 0, 69);
+
+-- StarterGui.duper.Frame.start.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+-- StarterGui.duper.Frame.start.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["7"]);
+G2L["9"]["CornerRadius"] = UDim.new(0.07999999821186066, 0);
+
+-- StarterGui.duper.Frame.stop
+G2L["a"] = Instance.new("TextButton", G2L["2"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["TextStrokeTransparency"] = 0;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 186, 195);
+G2L["a"]["TextSize"] = 45;
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Size"] = UDim2.new(0, 265, 0, 50);
+G2L["a"]["Name"] = [[stop]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[stop duping]];
+G2L["a"]["Position"] = UDim2.new(0, 34, 0, 136);
+
+-- StarterGui.duper.Frame.stop.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["a"]);
+
+
+-- StarterGui.duper.Frame.stop.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["a"]);
+G2L["c"]["CornerRadius"] = UDim.new(0.07999999821186066, 0);
+
+-- StarterGui.duper.Frame.grab
+G2L["d"] = Instance.new("TextButton", G2L["2"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["TextStrokeTransparency"] = 0;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(231, 202, 255);
+G2L["d"]["TextSize"] = 45;
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Size"] = UDim2.new(0, 265, 0, 50);
+G2L["d"]["Name"] = [[grab]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[grab bombs]];
+G2L["d"]["Position"] = UDim2.new(0, 34, 0, 206);
+
+-- StarterGui.duper.Frame.grab.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["d"]);
+
+
+-- StarterGui.duper.Frame.grab.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["d"]);
+G2L["f"]["CornerRadius"] = UDim.new(0.07999999821186066, 0);
+
+-- StarterGui.duper.Frame.use
+G2L["10"] = Instance.new("TextButton", G2L["2"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["TextStrokeTransparency"] = 0;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 191);
+G2L["10"]["TextSize"] = 45;
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Size"] = UDim2.new(0, 265, 0, 50);
+G2L["10"]["Name"] = [[use]];
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[use bombs]];
+G2L["10"]["Position"] = UDim2.new(0, 34, 0, 270);
+
+-- StarterGui.duper.Frame.use.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+
+
+-- StarterGui.duper.Frame.use.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["10"]);
+G2L["12"]["CornerRadius"] = UDim.new(0.07999999821186066, 0);
+
+-- StarterGui.duper.Frame.TextLabel
+G2L["13"] = Instance.new("TextLabel", G2L["2"]);
+G2L["13"]["TextStrokeTransparency"] = 0;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextSize"] = 29;
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Size"] = UDim2.new(0, 265, 0, 30);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[bomb count:]];
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Position"] = UDim2.new(0.10179640352725983, 0, 0.8190954923629761, 0);
+
+-- StarterGui.duper.Frame.count
+G2L["14"] = Instance.new("TextLabel", G2L["2"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["TextStrokeTransparency"] = 0;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["TextSize"] = 29;
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0, 265, 0, 30);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[0]];
+G2L["14"]["Name"] = [[count]];
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["Position"] = UDim2.new(0.10179640352725983, 0, 0.8944723606109619, 0);
+
+-- StarterGui.duper.Frame.count.LocalScript
+G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+
+
+-- StarterGui.duper.tbf
+G2L["16"] = Instance.new("Frame", G2L["1"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Size"] = UDim2.new(0, 108, 0, 32);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Position"] = UDim2.new(0, 25, 0, 150);
+G2L["16"]["Name"] = [[tbf]];
+
+-- StarterGui.duper.tbf.TextButton
+G2L["17"] = Instance.new("TextButton", G2L["16"]);
+G2L["17"]["TextWrapped"] = true;
+G2L["17"]["TextStrokeTransparency"] = 0;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextScaled"] = true;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53);
+G2L["17"]["TextSize"] = 30;
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["Size"] = UDim2.new(0, 137, 0, 36);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[bomb duper <]];
+G2L["17"]["Position"] = UDim2.new(0, 3, 0, 203);
+
+-- StarterGui.duper.tbf.TextButton.LocalScript
+G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.duper.tbf.TextButton.Dragging
+G2L["19"] = Instance.new("LocalScript", G2L["17"]);
+G2L["19"]["Name"] = [[Dragging]];
+
+-- StarterGui.duper.tbf.TextButton.UICorner
+G2L["1a"] = Instance.new("UICorner", G2L["17"]);
+
+
+-- StarterGui.duper.Frame.Smooth GUI Dragging
+local function C_3()
+local script = G2L["3"];
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_3);
+-- StarterGui.duper.Frame.start.LocalScript
+local function C_8()
+local script = G2L["8"];
+	script.Parent.Parent.stop.LocalScript.Enabled = false
+	_G.shouldRunLoop = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Parent.stop.LocalScript.Enabled = true
+	if _G.shouldRunLoop then
+	print("already looping")
+	else
+	
+		local Players = game:GetService("Players")
+		local LocalPlayer = Players.LocalPlayer
+		_G.shouldRunLoop = true
+		local loopDelay = 5
+	
+		local function teleportPlayerToLocation(player, targetPosition)
+			player.Character:MoveTo(targetPosition)
+		end
+	
+		local function lookAtDirection(player, lookDirection)
+			local character = player.Character
+			if character then
+				local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+				if humanoidRootPart then
+					humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, humanoidRootPart.Position + lookDirection)
+				end
+			end
+		end
+	
+		local function deleteUnwantedTools()
+			local allowedToolName = "B_ClassicTimebomb"
+	
+			local function isUnwantedTool(tool)
+				return tool:IsA("Tool") and tool.Name ~= allowedToolName
+			end
+	
+			for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+				if isUnwantedTool(tool) then
+					tool:Destroy()
+				end
+			end
+	
+			for _, tool in pairs(LocalPlayer.Character:GetChildren()) do
+				if isUnwantedTool(tool) then
+					tool:Destroy()
+				end
+			end
+		end
+	
+		local function moveTools()
+			for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					tool.Parent = LocalPlayer.Character
+				end
+			end
+	
+			wait(0.1)
+	
+			for _, tool in pairs(LocalPlayer.Character:GetChildren()) do
+				if tool:IsA("Tool") then
+					tool.Parent = workspace
+				end
+			end
+		end
+	
+		while _G.shouldRunLoop do
+			teleportPlayerToLocation(LocalPlayer, Vector3.new(-791, -23, -237))
+			lookAtDirection(LocalPlayer, Vector3.new(1, 0, 0))
+	
+			wait(0.1)
+			deleteUnwantedTools()
+			moveTools()
+	
+			wait(0.3)
+			teleportPlayerToLocation(LocalPlayer, Vector3.new(-520, -27, -44))
+			wait(0.6)
+	
+			LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
+	
+			wait(loopDelay)
+		end
+	end
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.duper.Frame.stop.LocalScript
+local function C_b()
+local script = G2L["b"];
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.shouldRunLoop = false
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.duper.Frame.grab.LocalScript
+local function C_e()
+local script = G2L["e"];
+	script.Parent.MouseButton1Click:Connect(function()
+	
+			for _, tool in pairs(workspace:GetChildren()) do
+				if tool:IsA("Tool") then
+					tool.Parent = game.Players.LocalPlayer.Backpack
+				end	
+		end
+	
+	end)
+end;
+task.spawn(C_e);
+-- StarterGui.duper.Frame.use.LocalScript
+local function C_11()
+local script = G2L["11"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+		local LocalPlayer = Players.LocalPlayer
+			local backpack = LocalPlayer.Backpack
+	
+			for _, tool in pairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					LocalPlayer.Backpack:FindFirstChild(tool.Name).Parent = LocalPlayer.Character
+	
+					LocalPlayer.Character:FindFirstChild(tool.Name):Activate()
+	
+					LocalPlayer.Character:FindFirstChild(tool.Name).Parent = LocalPlayer.Backpack
+				end
+			
+		end
+	
+	end)
+end;
+task.spawn(C_11);
+-- StarterGui.duper.Frame.count.LocalScript
+local function C_15()
+local script = G2L["15"];
+	-- Function to count objects in the workspace with the specified name
+	local function countObjects()
+		local bombCount = 0
+	
+		for _, object in pairs(workspace:GetChildren()) do
+			if object.Name == "B_ClassicTimebomb" then
+				bombCount = bombCount + 1
+			end
+		end
+	
+		script.Parent.Text = (bombCount)
+	end
+	
+	-- Main loop
+	while true do
+		countObjects()
+		wait(1) -- Adjust the delay between each check if needed
+	end
+	
+end;
+task.spawn(C_15);
+-- StarterGui.duper.tbf.TextButton.LocalScript
+local function C_18()
+local script = G2L["18"];
+	local button = script.Parent 
+	
+	local function openGUI()
+		local gui = game:GetService("Players").LocalPlayer.PlayerGui.duper.Frame 
+	
+		if gui.Visible == true then
+			gui.Visible = false 
+			script.Parent.Text = "bomb duper >"
+		else
+			gui.Visible = true
+			script.Parent.Text = "bomb duper <"
+		end
+	end
+	
+	button.MouseButton1Click:Connect(openGUI)
+end;
+task.spawn(C_18);
+-- StarterGui.duper.tbf.TextButton.Dragging
+local function C_19()
+local script = G2L["19"];
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_19);
+
+return G2L["1"], require;
+
+else
+game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "duper already executed", Icon = "rbxassetid://2541869220", Duration = 5, Button1 = "Okay"})
+end
