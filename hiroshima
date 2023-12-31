@@ -2,6 +2,13 @@ if not _G.hiroshima then
 _G.hiroshima = true
 local G2L = {};
 
+local part = Instance.new("Part")
+part.Size = Vector3.new(100, 1, 100)
+part.Transparency = 0.6
+part.Position = Vector3.new(-791, -23, -237)
+part.Anchored = true
+part.Parent = workspace
+
 -- StarterGui.duper
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[duper]];
