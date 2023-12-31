@@ -5,7 +5,7 @@ local G2L = {};
 local part = Instance.new("Part")
 part.Size = Vector3.new(100, 1, 100)
 part.Transparency = 0.6
-part.Position = Vector3.new(-791, -25, -237)
+part.Position = Vector3.new(-791, -26.7, -237)
 part.Anchored = true
 part.Parent = workspace
 
