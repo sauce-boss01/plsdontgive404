@@ -378,12 +378,14 @@ local function C_e()
 local script = G2L["e"];
 	script.Parent.MouseButton1Click:Connect(function()
 	
-			for _, tool in pairs(workspace:GetChildren()) do
-				if tool:IsA("Tool") then
-					tool.Parent = game.Players.LocalPlayer.Backpack
-				end	
-		end
-	
+			local player = game.Players.LocalPlayer
+local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
+
+for _, child in ipairs(workspace:GetChildren()) do
+    if player.Character and child:IsA("BackpackItem") and child:FindFirstChild("Handle") then
+        humanoid:EquipTool(child)
+    end
+end	
 	end)
 end;
 task.spawn(C_e);
