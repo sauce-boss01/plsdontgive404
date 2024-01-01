@@ -392,23 +392,22 @@ task.spawn(C_e);
 -- StarterGui.duper.Frame.use.LocalScript
 local function C_11()
 local script = G2L["11"];
-	script.Parent.MouseButton1Click:Connect(function()
-		local Players = game:GetService("Players")
-		local LocalPlayer = Players.LocalPlayer
-			local backpack = LocalPlayer.Backpack
-	
-			for _, tool in pairs(backpack:GetChildren()) do
-				if tool:IsA("Tool") then
-					LocalPlayer.Backpack:FindFirstChild(tool.Name).Parent = LocalPlayer.Character
-	
-					LocalPlayer.Character:FindFirstChild(tool.Name):Activate()
-	
-					LocalPlayer.Character:FindFirstChild(tool.Name).Parent = LocalPlayer.Backpack
-				end
-			
-		end
-	
-	end)
+	local player = game.Players.LocalPlayer
+script.Parent.MouseButton1Click:Connect(function()
+	local Backpack = player:FindFirstChildOfClass("Backpack")
+	local ammount = 1
+
+	for _, v in ipairs(Backpack:GetChildren()) do
+		v.Parent = player.Character
+		task.spawn(function()
+			for _ = 1, ammount do
+				v:Activate()
+			end
+			v.Parent = Backpack
+		end)
+	end
+end)
+
 end;
 task.spawn(C_11);
 -- StarterGui.duper.Frame.count.LocalScript
