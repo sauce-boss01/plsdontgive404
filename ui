@@ -1,0 +1,527 @@
+local G2L = {};
+
+-- StarterGui.rabax
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[rabax]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["Parent"] = game.CoreGui
+-- StarterGui.rabax.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(158, 158, 158);
+G2L["2"]["Size"] = UDim2.new(0, 338, 0, 435);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.6272079348564148, 0, 0.10509919375181198, 0);
+
+-- StarterGui.rabax.Frame.Tab1
+G2L["3"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["3"]["Active"] = true;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["CanvasSize"] = UDim2.new(0, 0, 1.399999976158142, 0);
+G2L["3"]["ScrollBarImageTransparency"] = 0.6000000238418579;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
+G2L["3"]["Size"] = UDim2.new(0, 338, 0, 379);
+G2L["3"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["ScrollBarThickness"] = 6;
+G2L["3"]["Position"] = UDim2.new(0, 0, 0.12873563170433044, 0);
+G2L["3"]["Name"] = [[Tab1]];
+
+-- StarterGui.rabax.Frame.Tab1.UIListLayout
+G2L["4"] = Instance.new("UIListLayout", G2L["3"]);
+G2L["4"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["4"]["Padding"] = UDim.new(0, 30);
+
+-- StarterGui.rabax.Frame.Tab1.0MainTitle
+G2L["5"] = Instance.new("TextLabel", G2L["3"]);
+G2L["5"]["TextWrapped"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["RichText"] = true;
+G2L["5"]["TextScaled"] = true;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5"]["TextTransparency"] = 0.5400000214576721;
+G2L["5"]["TextSize"] = 14;
+G2L["5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Size"] = UDim2.new(0, 331, 0, 33);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[rabax script things!1!1]];
+G2L["5"]["Name"] = [[0MainTitle]];
+G2L["5"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.rabax.Frame.Tab1.2Ball
+G2L["6"] = Instance.new("TextButton", G2L["3"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["6"]["TextSize"] = 33;
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["6"]["Name"] = [[2Ball]];
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Ball Collector]];
+G2L["6"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.2Ball.LocalScript
+G2L["7"] = Instance.new("LocalScript", G2L["6"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.2Ball.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["6"]);
+G2L["8"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["8"]["Thickness"] = 3.700000047683716;
+G2L["8"]["Transparency"] = 0.33000001311302185;
+G2L["8"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.3Bot
+G2L["9"] = Instance.new("TextButton", G2L["3"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["9"]["TextSize"] = 33;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["9"]["Name"] = [[3Bot]];
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Code Notifier Bot]];
+G2L["9"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.3Bot.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["9"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.3Bot.UIStroke
+G2L["b"] = Instance.new("UIStroke", G2L["9"]);
+G2L["b"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["b"]["Thickness"] = 3.700000047683716;
+G2L["b"]["Transparency"] = 0.33000001311302185;
+G2L["b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.4Hiroshima
+G2L["c"] = Instance.new("TextButton", G2L["3"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["c"]["TextSize"] = 33;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["c"]["Name"] = [[4Hiroshima]];
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Hiroshima]];
+G2L["c"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.4Hiroshima.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.4Hiroshima.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["c"]);
+G2L["e"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["e"]["Thickness"] = 3.700000047683716;
+G2L["e"]["Transparency"] = 0.33000001311302185;
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.iy
+G2L["f"] = Instance.new("TextButton", G2L["3"]);
+G2L["f"]["TextWrapped"] = true;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["f"]["TextSize"] = 33;
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["f"]["Name"] = [[iy]];
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[Infinite Yield]];
+G2L["f"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.iy.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["f"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.iy.UIStroke
+G2L["11"] = Instance.new("UIStroke", G2L["f"]);
+G2L["11"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["11"]["Thickness"] = 3.700000047683716;
+G2L["11"]["Transparency"] = 0.33000001311302185;
+G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.5Ticket
+G2L["12"] = Instance.new("TextButton", G2L["3"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["12"]["TextSize"] = 33;
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["12"]["Name"] = [[5Ticket]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Claim Daily Ticket]];
+G2L["12"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.5Ticket.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.5Ticket.UIStroke
+G2L["14"] = Instance.new("UIStroke", G2L["12"]);
+G2L["14"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["14"]["Thickness"] = 3.700000047683716;
+G2L["14"]["Transparency"] = 0.33000001311302185;
+G2L["14"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.1Daily
+G2L["15"] = Instance.new("TextButton", G2L["3"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["15"]["TextSize"] = 33;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["15"]["Name"] = [[1Daily]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Inf Daily Reward]];
+G2L["15"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.1Daily.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.1Daily.UIStroke
+G2L["17"] = Instance.new("UIStroke", G2L["15"]);
+G2L["17"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["17"]["Thickness"] = 3.700000047683716;
+G2L["17"]["Transparency"] = 0.33000001311302185;
+G2L["17"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.Tab1.6ClipBoard
+G2L["18"] = Instance.new("TextButton", G2L["3"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(177, 177, 177);
+G2L["18"]["TextSize"] = 33;
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Size"] = UDim2.new(0, 278, 0, 50);
+G2L["18"]["Name"] = [[6ClipBoard]];
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[Clipboard Codes Board]];
+G2L["18"]["Position"] = UDim2.new(0.08579881489276886, 0, 0.11375661194324493, 0);
+
+-- StarterGui.rabax.Frame.Tab1.6ClipBoard.LocalScript
+G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.6ClipBoard.UIStroke
+G2L["1a"] = Instance.new("UIStroke", G2L["18"]);
+G2L["1a"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["1a"]["Thickness"] = 3.700000047683716;
+G2L["1a"]["Transparency"] = 0.33000001311302185;
+G2L["1a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.rabax.Frame.MainTitle
+G2L["1b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["RichText"] = true;
+G2L["1b"]["TextScaled"] = true;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1b"]["TextTransparency"] = 0.5400000214576721;
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Size"] = UDim2.new(0, 155, 0, 35);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[S.R.H]];
+G2L["1b"]["Name"] = [[MainTitle]];
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Position"] = UDim2.new(0.008875739760696888, 0, -8.76941896876815e-09, 0);
+
+-- StarterGui.rabax.Frame.MainTitle.Version
+G2L["1c"] = Instance.new("TextLabel", G2L["1b"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1c"]["FontFace"] = Font.new([[rbxassetid://12187365977]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextTransparency"] = 0.6100000143051147;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Size"] = UDim2.new(0, 34, 0, 22);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[v0.69]];
+G2L["1c"]["Name"] = [[Version]];
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Position"] = UDim2.new(0.5497519373893738, 0, 0.3689396381378174, 0);
+
+-- StarterGui.rabax.Frame.MainSubTitle
+G2L["1d"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1d"]["TextTransparency"] = 0.6100000143051147;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Size"] = UDim2.new(0, 180, 0, 16);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[sauce's robax hub (real)]];
+G2L["1d"]["Name"] = [[MainSubTitle]];
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0.008875739760696888, 0, 0.06814813613891602, 0);
+
+-- StarterGui.rabax.Frame.TextButton
+G2L["1e"] = Instance.new("TextButton", G2L["2"]);
+G2L["1e"]["TextWrapped"] = true;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextScaled"] = true;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextSize"] = 46;
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Size"] = UDim2.new(0, 24, 0, 24);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[X]];
+G2L["1e"]["Position"] = UDim2.new(0.9171597361564636, 0, 0.01149425283074379, 0);
+G2L["1e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.rabax.Frame.TextButton.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+-- StarterGui.rabax.Frame.Smooth GUI Dragging
+G2L["20"] = Instance.new("LocalScript", G2L["2"]);
+G2L["20"]["Name"] = [[Smooth GUI Dragging]];
+
+-- StarterGui.rabax.Frame.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.rabax.Frame.Tab1.2Ball.LocalScript
+local function C_7()
+local script = G2L["7"];
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/plsdontgive404/main/v2"))()
+		
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+		game.StarterGui:SetCore("SendNotification", {Title = "Ball Collector", Text = "the ball collector script has loaded successfully", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "ok"})
+		script.Enabled = false
+	end)
+	
+	
+end;
+task.spawn(C_7);
+-- StarterGui.rabax.Frame.Tab1.3Bot.LocalScript
+local function C_a()
+local script = G2L["a"];
+	
+	script.Parent.MouseButton1Click:Connect(function()
+
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/sauce-boss01/plsdontgive404/main/bot'))()
+
+	local notifSound = Instance.new("Sound",workspace)
+	notifSound.PlaybackSpeed = 1.5
+	notifSound.Volume = 0.15
+	notifSound.SoundId = "rbxassetid://170765130"
+	notifSound:Play()
+	game.StarterGui:SetCore("SendNotification", {Title = "Bot", Text = "the notifier bot has loaded successfully", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "ok"})
+		script.Enabled = false
+	end)
+	
+	
+end;
+task.spawn(C_a);
+-- StarterGui.rabax.Frame.Tab1.4Hiroshima.LocalScript
+local function C_d()
+local script = G2L["d"];
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/plsdontgive404/main/hiroshima"))()
+	
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+		game.StarterGui:SetCore("SendNotification", {Title = "Hiroshima", Text = "hiroshima gui has loaded successfully", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "ok"})
+		script.Enabled = false
+	end)
+end;
+task.spawn(C_d);
+-- StarterGui.rabax.Frame.Tab1.iy.LocalScript
+local function C_10()
+local script = G2L["10"];
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+	end)
+	
+	
+end;
+task.spawn(C_10);
+-- StarterGui.rabax.Frame.Tab1.5Ticket.LocalScript
+local function C_13()
+local script = G2L["13"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = game:GetService("Players").LocalPlayer
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("DailyTicket"):WaitForChild("SaveDailyStayTickets_FireServer"):FireServer(unpack(args))
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+		game.StarterGui:SetCore("SendNotification", {Title = "Ticket", Text = "claimed daily ticket", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "ok"})
+		script.Enabled = false
+	
+	end)
+	
+end;
+task.spawn(C_13);
+-- StarterGui.rabax.Frame.Tab1.1Daily.LocalScript
+local function C_16()
+local script = G2L["16"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local playerGui = player.PlayerGui
+		local dailyR = playerGui.DailyRewardGui.DailyReward_Frame
+		local UserInputService = game:GetService("UserInputService")    
+		local screenGui = Instance.new("ScreenGui")
+		screenGui.Name = "ToggleGuiButton"
+		screenGui.Parent = playerGui
+		screenGui.ResetOnSpawn = false
+		local toggleButton = Instance.new("TextButton")
+		toggleButton.Text = "toggle daily reward"
+		toggleButton.Position = UDim2.new(0, 10, 0.5, 0)
+		toggleButton.Size = UDim2.new(0, 150, 0, 30)
+		toggleButton.Parent = screenGui
+		local function toggleVisibility()
+			if dailyR.Visible == false then 
+				dailyR.Visible = true
+			else
+				dailyR.Visible = false
+			end
+		end 
+		toggleButton.MouseButton1Click:Connect(toggleVisibility)
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+		game.StarterGui:SetCore("SendNotification", {Title = "Daily Reward Script", Text = "the daily reward duper has loaded successfully", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "ok"})
+		script.Enabled = false
+	end)
+end;
+task.spawn(C_16);
+-- StarterGui.rabax.Frame.Tab1.6ClipBoard.LocalScript
+local function C_19()
+local script = G2L["19"];
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+	setclipboard(game:GetService("Workspace").Billboards.BillboardRobuxCodeInfo.BoardMain.SurfaceFrontGui.TextLabel.Text)
+
+		local notifSound = Instance.new("Sound",workspace)
+		notifSound.PlaybackSpeed = 1.5
+		notifSound.Volume = 0.15
+		notifSound.SoundId = "rbxassetid://170765130"
+		notifSound:Play()
+		game.StarterGui:SetCore("SendNotification", {Title = "Ticket", Text = "successfully copied the code board", Icon = "rbxassetid://505845268", Duration = 2, Button1 = "ok"})
+	end)
+	
+	
+end;
+task.spawn(C_19);
+-- StarterGui.rabax.Frame.TextButton.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_1f);
+-- StarterGui.rabax.Frame.Smooth GUI Dragging
+local function C_20()
+local script = G2L["20"];
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_20);
+
+return G2L["1"], require;
